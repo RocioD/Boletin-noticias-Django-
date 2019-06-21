@@ -1,0 +1,18 @@
+{% extends 'Layout.html' %}
+
+{% block top %}
+    <h2>Ingresar Artículo</h2>
+{% endblock %}
+
+{% block body %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ articulo.as_p }}
+        <p>
+            <button class="btn btn-primary" type="submit">Grabar</button>
+        </p>
+    </form>
+    <p>
+        <a class="btn btn-success" href="{% url 'noticias_listar' %}">Cancelar</a>
+    </p>
+{% endblock %}

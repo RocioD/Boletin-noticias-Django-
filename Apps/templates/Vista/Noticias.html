@@ -1,0 +1,39 @@
+{% extends 'Layout.html' %}
+
+{% block barra %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'Index' %}"> Inicio</a></li>
+            <li><a href="{% url 'Noticias' %}"> Noticias </a></li>
+            <li><a href="{% url 'Eventos' %}"> Eventos </a></li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block top %}
+
+    <h2 class="cen neg">Noticias</h2>
+    
+{% endblock %}
+
+{% block body %}
+    {% for noticia in noticias %}
+    <div class="cuadro">
+        <div>
+            <h4 class="cen color neg">{{noticia.titulo}}</h4>
+        </div>
+        <div>
+            <p class="neg">{{ noticia.fecha }}</p>
+        </div>
+        <div>
+            <p>{{ noticia.resumen }}</p> 
+        </div>
+        <div>
+            <a class="btn btn-info" href="{% url 'Detalle' id=noticia.id %}">Ver</a>
+        </div>
+    </div>
+    {% endfor %}
+    
+{% endblock %}

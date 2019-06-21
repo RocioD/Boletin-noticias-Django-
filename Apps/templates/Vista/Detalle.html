@@ -1,0 +1,32 @@
+{% extends 'Layout.html' %}
+
+{% block barra %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'Index' %}"> Inicio</a></li>
+            <li><a href="{% url 'Noticias' %}"> Noticias </a></li>
+            <li><a href="{% url 'Eventos' %}"> Eventos </a></li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block top %}
+
+    <h2 class="cen neg">{{ articulo.titulo }}</h2>
+    
+{% endblock %}
+
+{% block body %}
+<div>
+    <p class="margenes neg">{{ articulo.fecha }}</p>
+</div>
+<div>
+    <h3 class="margenes neg">{{ articulo.resumen }}</h3>
+</div>
+<div>
+    <h4 class="margenes morado">{{ articulo.detalle }}</h4>
+</div>
+    
+{% endblock %}

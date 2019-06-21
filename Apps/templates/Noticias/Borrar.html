@@ -1,0 +1,21 @@
+{% extends 'Layout.html' %}
+
+{% block top %}
+    <h2>Eliminar Artículo</h2>
+{% endblock %}
+
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        <h2>Eliminar artículo "{{ articulo.titulo }}"</h2>
+    </div>
+    <p>
+        <button class="btn btn-danger" type="submit">Eliminar</button>
+    </p>
+
+    <p>
+        <a class="btn btn-success" href="{% url 'noticias_listar' %}">Cancelar</a>
+    </p>
+</form>
+{% endblock %}

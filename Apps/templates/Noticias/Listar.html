@@ -1,0 +1,54 @@
+{% extends 'Layout.html' %}
+
+{% block top %}
+    <h2>Noticias y Eventos</h2>
+    <p>
+        <a class="btn btn-success" href="../noticias/crear">Crear artículo</a>
+    </p>
+    
+{% endblock %}
+
+{% block body %}
+    <table class="table table-bordered table-striped colorear">
+        <thead class="table-header">
+            <tr>
+                <td class="neg"> Título </td>
+                <td class="neg"> Fecha </td>
+                <td class="neg"> Tipo </td>
+                <td class="neg"> Resumen </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articulo in lista %}
+            
+                        
+                <tr>
+                    <td>{{ articulo.titulo }}</td>
+                    <td>{{ articulo.fecha }}</td>
+                    
+                    <td>
+                        {% if articulo.familia == 'N' %}
+                            Noticia
+                        {% else %}
+                            Evento
+                        {% endif %}                      
+                    </td>
+                    <td>{{ articulo.resumen }}</td>
+                    <td>
+                        <a class="btn btn-info" href="{% url 'Detalle' id=articulo.id %}" target="blank_">Ver</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-success" href="{% url 'noticias_editar' id=articulo.id %}">Editar</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="{% url 'noticias_borrar' id=articulo.id %}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}

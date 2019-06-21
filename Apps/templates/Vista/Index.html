@@ -1,0 +1,36 @@
+{% extends 'Layout.html' %}
+
+{% block barra %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'Index' %}"> Inicio</a></li>
+            <li><a href="{% url 'Noticias' %}"> Noticias </a></li>
+            <li><a href="{% url 'Eventos' %}"> Eventos </a></li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block top %}
+
+    <h2 class="cen neg">Bienvenidos al Boletín Los Pinos</h2>
+    
+{% endblock %}
+
+{% block body %}
+    <div class="margenes">
+        <h3 class="neg cen color">Palabras de la comunidad</h3>
+    </div>
+    <div class="margenes">
+        <h4 class="morado">
+            En nombre de la Comunidad Colegio Los Pinos del Bosque les doy nuestra fraternal bienvenida 
+            a este año escolar 2019. Es grato para mí saludar a todos nuestros alumnos y a sus familias, 
+            a nuestros profesores, funcionarios y de manera especial, a todos aquellos que se integran este 
+            año, por primera vez al Colegio Los Pinos del Bosque. 
+            Damos la bienvenida a un nuevo año escolar  que esperamos sea pleno de éxitos y logros personales 
+            para todos quienes conforman esta comunidad escolar.
+        </h4>
+    </div>
+    
+{% endblock %}

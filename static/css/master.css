@@ -1,0 +1,59 @@
+﻿
+
+
+.cen { text-align: center; }
+.izda { text-align: left; }
+.dcha { text-align: right; }
+.jus { text-align: justify; }
+
+.top { vertical-align: top; }
+.mid { vertical-align: middle; }
+.bot { vertical-align: bottom; }
+
+.neg {
+    font-weight: bold;
+}
+.pinos{
+    background-image: url("../img/pinos.jpg");
+} 
+
+.cuadro{
+    float: left;
+    width: 30%;
+    margin: 1%;
+    border: 1px maroon groove;
+    background-color: beige;
+    padding: 15px;
+}
+
+@media(max-width: 1000px) {
+    .cuadro {width: 48% !important;}
+}
+
+@media(max-width: 500px) {
+    .cuadro {width: 98% !important;}
+}
+
+.hojas{
+    background-image:  url("../img/hojas2.jpg");
+}
+
+.margenes{
+    margin: 30px 2% 10px 2%;
+}
+
+.color{
+    color: #664444;
+}
+
+.colorear{
+    background-color: beige;
+}
+
+.morado{
+    color: #070719;
+}
+
+.h45{
+    font-size: 16px;
+}
